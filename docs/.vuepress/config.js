@@ -42,10 +42,53 @@ module.exports = {
 			},
 			{
 				title: '数据源',
-				path: '/data/',
+				children: [{
+					title: '介绍',
+					path: '/data/'
+				},
+				{
+					title: 'BudibaseDB',
+					path: '/data/budibasedb/',
+					children:['/data/budibasedb/text','/data/budibasedb/number','/data/budibasedb/datetime']
+				},
+				{
+					title: 'PostgreSQL MySQL',
+					path: '/data/postgresql'
+				}],
+				collapsable: false
+			},
+			{
+				title: '界面设计',
+				path: '/design/',
 				children: ['/data/introduction'],
 				collapsable: false
-			}
+			},
+			{
+				title: '自动化',
+				path: '/automation/',
+				children: ['/data/introduction'],
+				collapsable: false
+			},
+			{
+				title: '权限管理',
+				path: '/user/',
+				children: ['/data/introduction'],
+				collapsable: false
+			},
+			{
+				title: '自托管',
+				path: '/self-hosting/',
+				children: ['/self-hosting/hosting-setting', '/self-hosting/reverse-proxy',
+					'/self-hosting/accessing-couchdb', '/self-hosting/accessing-minio'
+				],
+				collapsable: false
+			},
+			{
+				title: '其他',
+				path: '/others/',
+				children: ['/data/introduction'],
+				collapsable: false
+			},
 		],
 		lastUpdated: 'Last Updated',
 		displayAllHeaders: true,

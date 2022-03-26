@@ -22,13 +22,14 @@
 #### 添加服务日志表（从头开始）
 8. 点击 BudibaseDB，并创建新表,命名为Service Log，并取消选中“Generate screens in design section”-我们将手动添加这些。
 9. 创建以下列：  
-| 列名 | 列类型 |  
-| ---- | ---- |  
-|说明|文本|  
-|车辆|关系（一辆车有多个保养日志）|  
-|服务日期|日期时间|  
-|类别|选项-我们的选择是；制动器、轮胎、发动机、变速器*列出每个选项时使用新行。|  
-|里程|数量|  
+
+|Column name								|Column type										|
+|---										|---												|
+|Description								|Text												|
+|Vehicle									|Relationship (one Vehicle has Many Service Logs)	|
+|Service Date								|Datetime											|
+|Category									|Options - Our options are;<br>	Brakes, Tyres, Engine, Transmission;<br>*Use a new line when listing each option.							|
+|Mileage									|Number												|
 10. 最后，在服务日志表中创建一些行，这样我们就有了要测试的数据。
 > 以下视频来源于Youtube，若无法加载请科学上网。后期将录制中文版
 <iframe width="785" height="480" src="https://www.youtube.com/embed/aRXbLqQYtkA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
