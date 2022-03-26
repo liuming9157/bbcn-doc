@@ -1,5 +1,5 @@
 # Kubernetes
-在 Kubernetes 集群中 Budibase。
+在 Kubernetes 集群中安装 Budibase。
 
 在开始在 Kubernetes 上使用 Budibase 之前，我们必须安装一些命令行实用程序。按照以下指南安装 Kubectl 和 Helm。
 
