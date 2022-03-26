@@ -50,6 +50,9 @@ module.exports = {
 		lastUpdated: 'Last Updated',
 		displayAllHeaders: true,
 		repo: 'liuming9157/bbcn-doc',
+		docsRepo: 'liuming9157/bbcn-doc',
+		docsDir: 'docs',
+		docsBranch: 'master',
 		editLinks: true,
 		editLinkText: '帮助我们改善此页面！'
 	}

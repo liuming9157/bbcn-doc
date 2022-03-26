@@ -1,7 +1,11 @@
 
 # Budibase 中文文档
 ### 缘起
-今年一直在关注低代码，发现了好项目Budibase.本来想联系官方做i18n支持，但是发现之前有同学联系他们被放弃了。于是重开个项目bbcn(babibase-china)。计划三步走：1.翻译文档2.前端界面汉化3.重新打包docker镜像
+今年一直在关注低代码，发现了好项目Budibase.本来想联系官方做i18n支持，但是发现PR里有相关内容被官方放弃。于是重开个项目bbcn(Budibase-China)。
+计划三步走：1.翻译文档2.前端界面汉化3.重新打包docker镜像。  
+如果你想参与，无论是哪一步，欢迎加入进来。我的联系方式：
+1. Email:liuming@mzsat.cn
+2. Wechat <img src="http://alioss-cdn.mzyun.tech/common/qrcode.jpg" width="100" height="100"/>
 
 <p align="center">
   <a href="https://www.budibase.com">
