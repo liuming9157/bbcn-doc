@@ -60,19 +60,19 @@ module.exports = {
 			{
 				title: '界面设计',
 				path: '/design/',
-				children: ['/data/introduction'],
+				children: ['/data/postgresql'],
 				collapsable: false
 			},
 			{
 				title: '自动化',
 				path: '/automation/',
-				children: ['/data/introduction'],
+				children: ['/data/postgresql'],
 				collapsable: false
 			},
 			{
 				title: '权限管理',
 				path: '/user/',
-				children: ['/data/introduction'],
+				children: ['/data/postgresql'],
 				collapsable: false
 			},
 			{
@@ -86,7 +86,7 @@ module.exports = {
 			{
 				title: '其他',
 				path: '/others/',
-				children: ['/data/introduction'],
+				children: ['/data/postgresql'],
 				collapsable: false
 			},
 		],
