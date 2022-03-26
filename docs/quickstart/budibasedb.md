@@ -7,7 +7,7 @@
 + 维修日志表，用于记录车辆的维修历史记录
 ### 入门
 1. 下载以下CSV
-[bb-qurickstart-vehicles](https://docs.google.com/spreadsheets/d/1Ni1ah_VU1pRZKuNxzby7ldznlnznS7z6f7jTs0_NPck/edit?usp=sharing)
+[bb-quickstart-vehicles](https://docs.google.com/spreadsheets/d/1Ni1ah_VU1pRZKuNxzby7ldznlnznS7z6f7jTs0_NPck/edit?usp=sharing)
 2. 在创建新帐户 https://account.budibase.app/register（仅需要几秒钟）
 3. 登录后，创建一个新的应用程序并将其命名为Vehicle Maintenance Log
 ### 数据
