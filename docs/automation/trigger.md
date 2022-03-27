@@ -11,7 +11,7 @@
 4. JSON Webhook 形式的外部触发器
 5. 当应用程序中发生特定操作时
 6. CRON 触发器（每天早上 6 点触发此自动化）
-7. 
+
 触发器是 Budibase 系统内部的，因此不能轻易更改 - 如果您有一个好的触发器的想法，请[告诉我们](https://github.com/Budibase/budibase/discussions)！
 
 也可以使用外部 Webhook 创建自定义触发器 - 创建一个外部应用程序，将在您需要的条件下触发，并以您的 Budibase Webhook 为目标！

@@ -60,7 +60,7 @@ module.exports = {
 			{
 				title: '界面设计',
 				path: '/design/',
-				children: ['/design/screens','/design/blocks','/design/layout'],
+				children: ['/design/screen','/design/blocks','/design/layout'],
 				collapsable: false
 			},
 			{
