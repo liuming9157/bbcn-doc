@@ -86,7 +86,7 @@ module.exports = {
 			{
 				title: '其他',
 				path: '/others/',
-				children: ['/data/postgresql'],
+				children: ['/others/budibase-architecture','/others/deployment-information'],
 				collapsable: false
 			},
 		],

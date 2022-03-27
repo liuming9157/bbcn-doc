@@ -42,11 +42,12 @@ docker-compose up
 如果您遇到任何问题，最简单的解决方法是 [在我们的社区里发起讨论](https://github.com/Budibase/budibase/discussions).
 
 ### 更多信息
-对于那些对更高级的设置感兴趣的人，你可能需要对docker compose进行更改。yaml配置文件。下面，我们介绍了各种服务及其用途：
+对于那些对更高级的设置感兴趣的人，你可能需要对docker-compose.yaml进行更改。下面，我们介绍了各种服务及其用途：
 
 1. [CouchDB](https://couchdb.apache.org/)-这是我们的数据库服务，使用docker卷来保存数据。
 2. [MinIO](https://min.io/)-S3的开源替代品，充当文件、二进制数据、附件等的对象存储。
 3. [Nginx](https://www.nginx.com/)-我们的代理引擎，它提供了一个单一的接口，通过它可以根据需要与所有服务进行通信。
 4. [Budibase Worker](https://github.com/Budibase/budibase/tree/master/packages/worker)-一个后台服务引擎，可以在主应用服务器的后台处理任务。
-5. [Budibase Server](https://github.com/Budibase/budibase/tree/master/packages/server)-Budibase平台的主要界面，提供应用程序将使用的API。
+5. [Budibase Server](https://github.com/Budibase/budibase/tree/master/packages/server)-Budibase平台的主要部分，提供应用程序将使用的API。
+
 所有这些服务都需要能够相互通信，但是，如果需要，它们可以单独托管，只要它们有正确的url来互相访问，它们就可以正常工作。
