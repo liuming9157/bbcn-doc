@@ -28,9 +28,9 @@ Budibase是一个用于构建、设计和自动化业务应用程序的一体化
 ### Budibase如何工作
 使用Budibase构建应用程序需要4个简单步骤：
 
-1. 安装Budibase -使用Budibase云要在几秒钟内开始，或使用 Docker , K8S，或 DigitalOcean .
-2. 添加数据-您可以连接到PostgreSQL、restapi、mssql等数据源，也可以从Budibase的内置数据库（budibasedb，构建在CouchDB之上）从头开始。
-3. 设计用户界面-构建人们喜欢使用的漂亮、易访问的用户界面。从数据自动生成CRUD屏幕，或从头创建自定义屏幕。使用功能强大的组件，如表、按钮、表单输入等来丰富您的界面。只需单击一下，即可从亮模式切换到暗模式。
-4. 自动化过程-在几秒钟内，设置自动化，如电子邮件警报、延迟通知、CRON操作等等。
+1. 安装Budibase -使用Budibase Cloud仅仅需要几秒钟即可开始，您也可以使用 Docker , K8S，或 DigitalOcean进行自托管 .
+2. 添加数据-您可以连接到PostgreSQL、RestAPI、MS SQL等数据源，也可以从Budibase的内置数据库（budibasedb，构建在CouchDB之上）从0开始。
+3. 设计用户界面-构建人们喜欢使用的漂亮、易访问的用户界面。从数据自动生成CRUD屏幕，或从头创建自定义屏幕。使用功能强大的组件，如表格、按钮、表单输入等来丰富您的界面。只需单击一下，即可从白昼模式切换到暗黑模式。
+4. 自动化过程-仅需几秒钟即可设置自动化，如电子邮件警报、延迟通知、CRON操作等等。
 ### 入门
-之后安装Budibase，我们建议用户从快速入门教程或者使用 Budibase模板 .
+安装Budibase后，我们建议用户从[快速入门教程](/quickstart)或者使用[Budibase模板](https://budibase.com/templates/) .
