@@ -10,9 +10,15 @@ module.exports = {
 	themeConfig: {
 
 		nav: [{
-				text: '文档',
+				text: '中文文档',
 				link: '/overview',
 				target: '_self',
+				rel: ''
+			},
+			{
+				text: '英文文档',
+				link: 'https://docs.budibase.com/',
+				target: '_blank',
 				rel: ''
 			},
 			{
@@ -43,36 +49,40 @@ module.exports = {
 			{
 				title: '数据源',
 				children: [{
-					title: '介绍',
-					path: '/data/'
-				},
-				{
-					title: 'BudibaseDB',
-					path: '/data/budibasedb/',
-					children:['/data/budibasedb/text','/data/budibasedb/number','/data/budibasedb/datetime']
-				},
-				{
-					title: 'PostgreSQL MySQL',
-					path: '/data/postgresql'
-				}],
+						title: '介绍',
+						path: '/data/'
+					},
+					{
+						title: 'BudibaseDB',
+						path: '/data/budibasedb/',
+						children: ['/data/budibasedb/text', '/data/budibasedb/number',
+							'/data/budibasedb/datetime'
+						]
+					},
+					{
+						title: 'PostgreSQL MySQL',
+						path: '/data/postgresql'
+					}
+				],
 				collapsable: false
 			},
 			{
 				title: '界面设计',
 				path: '/design/',
-				children: ['/design/screen','/design/blocks','/design/layout'],
+				children: ['/design/screen', '/design/blocks', '/design/layout'],
 				collapsable: false
 			},
 			{
 				title: '自动化',
 				path: '/automation/',
-				children: ['/automation/','/automation/trigger','/automation/action'],
+				children: ['/automation/', '/automation/trigger', '/automation/action'],
 				collapsable: false
 			},
 			{
 				title: '权限管理',
 				path: '/user/',
-				children: ['/data/postgresql'],
+				children: ['/user/', '/user/openid-connect', '/user/email', '/user/portal',
+					'/user/user-setting'],
 				collapsable: false
 			},
 			{
@@ -86,7 +96,7 @@ module.exports = {
 			{
 				title: '其他',
 				path: '/others/',
-				children: ['/others/budibase-architecture','/others/deployment-information'],
+				children: ['/others/budibase-architecture', '/others/deployment-information'],
 				collapsable: false
 			},
 		],
