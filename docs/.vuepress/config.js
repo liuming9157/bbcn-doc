@@ -60,13 +60,13 @@ module.exports = {
 			{
 				title: '界面设计',
 				path: '/design/',
-				children: ['/data/postgresql'],
+				children: ['/design/screens','/design/blocks','/design/layout'],
 				collapsable: false
 			},
 			{
 				title: '自动化',
 				path: '/automation/',
-				children: ['/data/postgresql'],
+				children: ['/automation/','/automation/trigger','/automation/action'],
 				collapsable: false
 			},
 			{
