@@ -1,7 +1,7 @@
 # Kubernetes
 在 Kubernetes 集群中安装 Budibase。
 
-在开始在 Kubernetes 上使用 Budibase 之前，我们必须安装一些命令行实用程序。按照以下指南安装 Kubectl 和 Helm。
+开始在 Kubernetes 上使用 Budibase 之前，我们必须安装一些命令行实用程序。按照以下指南安装 Kubectl 和 Helm。
 
 + [Helm CLI](https://helm.sh/docs/intro/install/)
 + [kubectl CLI](https://kubernetes.io/docs/tasks/tools/#kubectl)
@@ -31,15 +31,16 @@ helm repo update
 helm install --create-namespace --namespace budibase budibase budibase/budibase
 ```
 稍等片刻，Budibase 将创建所有容器和资源。然后你可以运行：
-
+```
 kubectl get pods -n budibase
-您现在应该能够看到您的新 Budibase 安装在您的 K8S 集群中启动并运行。
+```
+您现在应该能够看到 Budibase 安装程序在您的 K8S 集群中启动并运行。
 
 ![Budibase安装K8S](https://res.cloudinary.com/daog6scxm/image/upload/v1646670651/docs/Screenshot_2021-08-16_at_22.19.58_pnzppx.png)
 
-是时候建造了！要使用新安装，您需要获取入口控制器的 IP 地址。Budibase 利用NGINX 入口控制器将传入流量引导到其他 Budibase 服务。
+您需要获取ingress controller的 IP 地址。Budibase 利用NGINX ingress controller将传入流量引导到其他 Budibase 服务。
 
-您可以使用入口控制器的 IP 地址访问 Budibase 安装，您可以使用以下命令获取该地址：
+您可以使用ingress controller的 IP 地址访问 Budibase 安装，您可以使用以下命令获取该地址：
 ```
 kubectl get ingress -n budibase
 ```
@@ -47,22 +48,22 @@ kubectl get ingress -n budibase
 
 ![Budibase 管理界面](https://files.readme.io/022091e-Screenshot_2021-08-17_at_18.06.17.png)
 
-升级你的图表
+#### 升级Chart
 要获得最新最好的，您可以运行以下命令来更新 repo 并将最新的 Budibase Helm Chart 安装到您的环境中！
 ```
 helm repo update
 helm upgrade budibase-kubernetes budibase/budibase
 ```
 ### 配置
-### 云特定负载均衡器
-默认情况下，Budibase 配置一个基本的 NGINX 入口控制器来将流量路由到您的 Budibase 服务。如果您想为您的特定云运行负载均衡器，您可以关闭与 Budibase 捆绑的 NGINX 入口控制器并为您的特定云运行您自己的入口控制器。
+### 负载均衡
+默认情况下，Budibase 配置一个基本的 NGINX ingress controller来将流量路由到您的 Budibase 服务。如果您想运行自己的负载均衡器，您可以关闭与 Budibase 捆绑的 NGINX ingress controller并运行您自己的ingress controller。
 ```
 ingress:
   nginx: false
   aws: true
 ```
-### 使用自定义域
-如果您使用自定义域进行安装，则需要将其添加到values.yaml中入口控制器的主机部分。请注意我们是如何添加yourdomain.com的。然后，您应该能够在您的 DNS 提供商中安装一条 A 记录，以指向您的入口控制器的 URL。
+### 使用自定义域名
+如果您使用自定义域名进行安装，则需要将其添加到values.yaml中ingress controller的host部分。请注意我们是如何添加yourdomain.com的。然后，您应该能够在您的 DNS 提供商中加入一条 A 记录，以指向您的ingress controller的 URL。
 ```
 ingress:
   enabled: true
@@ -82,7 +83,7 @@ ingress:
               number: 10000 
 ```
 ### 扩展 Budibase
-您可以通过在 Budibase helm 图表的values.yaml中更新给定服务的replicaCount来扩展安装中的节点。例如，如果我们想因高负载而扩大工作者和应用服务，我们可以更新我们的values.yaml以获得更高的replicaCount。更新后，升级您的图表以应用更改。
+您可以通过在 Budibase helm chart的values.yaml中更新给定服务的replicaCount来扩展安装中的节点。例如，如果我们想因高负载而扩大worker and app service，我们可以更新我们的values.yaml以获得更高的replicaCount。更新后，升级您的chart以应用更改。
 ```
 services:
   dns: cluster.local
@@ -100,13 +101,14 @@ services:
     port: 4001
     replicaCount: 2
 ```
-### 私钥管理
-如果您在 values.yaml 中将 createSecrets 安装为 true，budibase 将为您创建以下凭据：
+### Secret管理
+如果您在 values.yaml 中将 createSecrets 设置为 true，budibase 将为您创建以下凭据：
 
-内部 API 密钥，可用于 API 请求。
-一个智威汤逊秘密
-对象存储访问密钥（如果使用 MinIO）
-对象存储密钥（如果使用 MinIO）
++ internal API key，可用于 API 请求。
++ 一个 JWT Secret
++ 对象存储访问密钥（如果使用 MinIO）
++ 对象存储密钥（如果使用 MinIO）
+
 如果您需要读取密钥的值，可以使用kubectl和以下命令从 k8s 密钥中读取值：
 ```
 # for internal API key
@@ -153,10 +155,10 @@ Budibase 附带了一个用于对象存储的 MinIO 服务器。由于 MinIO 与
     secretKey: "your-secret-key" # AWS_SECRET_ACCESS_KEY
 ```	
 ### 故障排除
-我的集群中的连接问题
+#### 集群中的连接问题
 确保您的 Budibase 安装正在 Kubernetes 的 Budibase 命名空间中运行。将流量路由到 Budibase 服务的代理依赖于此。
 
-### 仍有问题？
+#### 仍有问题？
 如果您需要帮助或发现了错误，请在我们的 GitHub 讨论论坛上提出讨论。对于 Kubernetes 安装，请尝试在您的讨论中包含以下信息：
 
 您正在使用哪个 K8S 提供商（AWS/MiniKube 等）
