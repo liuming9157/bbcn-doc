@@ -21,7 +21,7 @@
 如果在生产环境中运行，请更新托管密钥<br>
 如果您计划在生产环境中运行群集，则需要在继续之前更新一些设置，重要的是在中找到的托管密钥。关于这个的env信息可以在这里找到。
 :::
-如果你有一个基于ARM的CPU，你必须更新你的docker组合。山药。使用以下内容更新compose配置的couchdb服务部分：
+如果你有一个基于ARM的CPU，你必须更新你的docker-compose.yaml。使用以下内容更新compose配置的couchdb服务部分：
 ```
  couchdb-service:
     platform: linux/amd64
